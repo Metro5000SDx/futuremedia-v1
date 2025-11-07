@@ -1,0 +1,29 @@
+name = "futuremedia-v1"
+compatibility_date = "2024-11-07"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "futuremedia-v1-prod"
+
+[env.preview]
+name = "futuremedia-v1-preview"
+
+# Environment variables for production
+[env.production.vars]
+NODE_ENV = "production"
+
+# Environment variables for preview
+[env.preview.vars]
+NODE_ENV = "development"
+
+# KV namespace for caching (optional)
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "your-kv-namespace-id"
+# preview_id = "your-preview-kv-namespace-id"
+
+# D1 database for SQLite (if using D1 instead of external SQLite)
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "futuremedia-db"
+# database_id = "your-database-id"
